@@ -36,7 +36,7 @@ npm install
 
 In terminal:
 ```
-cd /PROJECT_PATH__/scripts/
+cd _REPLACE_WITH_PROJECT_PATH_/scripts/
 chmod +x setup.sh
 ./setup.sh
 source envvar
