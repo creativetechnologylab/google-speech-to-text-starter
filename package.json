@@ -1,0 +1,13 @@
+{
+  "name": "2017-maidc-pipe-fmp-stt",
+  "version": "0.1.0",
+  "description": "Pipe STT experiment",
+  "main": "app.js",
+  "author": "@gaffafoote",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "@google-cloud/speech": "0.10.2",
+    "node-record-lpcm16": "^0.3.0",
+    "request-promise": "^4.2.2"
+  }
+}
