@@ -16,13 +16,12 @@ https://console.developers.google.com/project/_/apis/credentials
 2. Create new project and give it a name. Make a note of the **Project ID**.
 
 3. Create credentials
-![Create crednetials](http://recordit.co/ULWuLVcJXi)
+![Create crednetials](http://recordit.co/ULWuLVcJXi.gif)
 
 4. Enable Speech to Text API for this project. Be sure to select the project that you just created in the drop down menu
 https://console.developers.google.com/apis/api/speech.googleapis.com/overview
 
-![Enable API](http://recordit.co/bO7Nvp9llM/)
-
+![Enable API](http://recordit.co/bO7Nvp9llM.gif)
 
 
 ## Install all node dependencies
