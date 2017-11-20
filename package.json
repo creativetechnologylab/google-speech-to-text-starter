@@ -8,6 +8,7 @@
   "dependencies": {
     "@google-cloud/speech": "0.10.2",
     "node-record-lpcm16": "^0.3.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "rpio": "^0.9.19"
   }
 }
