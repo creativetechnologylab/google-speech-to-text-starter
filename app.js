@@ -1,24 +1,32 @@
 var stt = require('./stt')
+var rpio = require('rpio');
 
-/* ------- STT -------- */
 var projectId = 'pipe001-184515';
-setTimeout(function(){
-  stt(projectId).then(function(sentiment){
-    console.log(sentiment)
 
-    if(sentiment.label == "negative"){
-      console.log("1");
-    }
+rpio.open(12, rpio.INPUT, rpio.PULL_DOWN);
+function pollcb(pin){
+  var state = rpio.read(pin) ? 'pressed' : 'released';
+  console.log('Button event on P%d (button currently %s)', pin, state);
+  if(state == 'pressed'){
+    stt(projectId).then(function(sentiment){
+      console.log(sentiment.label)
 
-    if(sentiment.label == "neutral"){
-      console.log("2");
-    }
+      if(sentiment.label == "neg"){
+        console.log("1");
+      }
 
-    if(sentiment.label == "positive"){
-      console.log("3");
-    }
+      if(sentiment.label == "neutral"){
+        console.log("2");
+      }
 
-  }).catch(function(err){
-    console.error(err);
-  });
-})
+      if(sentiment.label == "pos"){
+        console.log("3");
+      }
+
+    }).catch(function(err){
+      console.error(err);
+    });
+  }
+}
+
+rpio.poll(12, pollcb);
