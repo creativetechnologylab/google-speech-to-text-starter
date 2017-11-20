@@ -10,19 +10,21 @@ https://developers.google.com/identity/protocols/application-default-credentials
 
 ### Create a STT Project in Google Console
 
-1. Go to Project Credentials page:
-https://console.developers.google.com/project/_/apis/credentials
+1. Go to Project Credentials page:  
+https://console.developers.google.com/projectselector/apis
 
-2. Create new project and give it a name. Make a note of the **Project ID**.
+2. Create new project and give it a name. Make a note of the **Project ID**. 
 
-3. Create credentials
-![Create crednetials](http://recordit.co/ULWuLVcJXi)
+3. You should automatically be asked to create credentials now. Choose the Service Account Key, add any Service Account Name and choose the Role of Project > Owner. Download the JSON credentials file.
+![Create crednetials](http://recordit.co/ULWuLVcJXi.gif)
+_DO NOT LOOSE THIS FILE_
 
-4. Enable Speech to Text API for this project. Be sure to select the project that you just created in the drop down menu
+4. Copy the downloaded JSON file into the `scripts/` directory.
+
+5. Enable Speech to Text API for this project. Be sure to select the project that you just created in the drop down menu
 https://console.developers.google.com/apis/api/speech.googleapis.com/overview
 
-![Enable API](http://recordit.co/bO7Nvp9llM/)
-
+![Enable API](http://recordit.co/bO7Nvp9llM.gif)
 
 
 ## Install all node dependencies
@@ -34,7 +36,7 @@ npm install
 
 In terminal:
 ```
-cd /PROJECT_PATH__/scripts/
+cd _REPLACE_WITH_PROJECT_PATH_/scripts/
 chmod +x setup.sh
 ./setup.sh
 source envvar
